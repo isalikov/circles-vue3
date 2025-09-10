@@ -1,1 +1,2 @@
-export * from './TheCounter'
+export * from './atoms'
+export * from './icons'
