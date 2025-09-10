@@ -9,19 +9,19 @@ const counter = ref(0)
 onMounted(() => {
   const interval = setInterval(() => {
     if (counter.value <= 100) {
-      counter.value++
+      counter.value += 10
     } else {
       clearInterval(interval)
     }
-  }, 10)
+  }, 100)
 })
 </script>
 <template>
   <div :class="styles.container">
-    <TheCounter :value="counter" type="progress" />
-    <TheCounter :value="counter" type="succeed" />
-    <TheCounter :value="counter" type="warning" />
-    <TheCounter :value="counter" type="error" />
+    <TheCounter :value="counter" type="progress" :size="48" />
+    <TheCounter :value="counter" type="succeed" :size="64" />
+    <TheCounter :value="counter" type="warning" :size="72" />
+    <TheCounter :value="counter" type="error" :size="92" />
   </div>
 </template>
 
