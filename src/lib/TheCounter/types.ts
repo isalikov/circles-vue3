@@ -1,3 +1,6 @@
 export type TheCounterProps = {
-  initialValue: number
+  type: 'progress' | 'warning' | 'error' | 'succeed'
+  value: number
+
+  size?: number
 }
