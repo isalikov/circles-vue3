@@ -12,6 +12,6 @@ const value = ref(initialValue)
 
 <style scoped>
 .container {
-  outline: 1px solid blue;
+  display: flex;
 }
 </style>

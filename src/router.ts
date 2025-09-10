@@ -1,11 +1,15 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 
-import { HomeRoute } from '@/routes'
+import { HomeRoute, DiagramRoute, ProgressRoute } from '@/routes'
 
-const routes = [{ path: '/', component: HomeRoute }]
+const routes = [
+  { path: '/', component: HomeRoute },
+  { path: '/diagram', component: DiagramRoute },
+  { path: '/progress', component: ProgressRoute },
+]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 })
 
